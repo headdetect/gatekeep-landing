@@ -1,10 +1,79 @@
+$gk: #d5422e;
+
 html, body {
-  background: #fefefe;
+  background: #F7F7F7;
   height: 100%;
   width: 100%;
 }
 
 section {
   text-align: center;
+
+  &:not(#intro) {
+    h5 {
+      margin-top: 2rem;
+
+      &:after {
+        content: ' ';
+        display: block;
+        width: 40px;
+        margin: 10px auto;
+        border: 1px solid $gk;
+      }
+    }
+  }
+
+  &#intro {
+    background-color: $gk;
+
+
+    .jumbotron {
+      background: none;
+      color: white;
+
+      margin-bottom: 0;
+      padding: 10rem 0 12rem 0;
+    }
+  }
+
+  &#kiosk-preview {
+    margin: 15px 0;
+  }
+
+  &#philosophies {
+    .philosophy {
+      text-align: left;
+
+      .col-3, .col-9 {
+        padding: 1rem;
+
+        img {
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+
+  &#features {
+
+    h5 {
+      margin-bottom: 5rem;
+    }
+
+    .feature {
+      margin-bottom: 8rem;
+      text-align: left;
+      justify-content: center;
+    }
+  }
+
+}
+
+.container {
+  min-height: 300px;
+
+  &.flex-container {
+    display: flex;
+  }
 }
 
